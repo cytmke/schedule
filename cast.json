@@ -1,6 +1,5 @@
 {
   "actors": [
-    "The SpongeBob Musical Cast List",
     "Kyla Bassler",
     "Tavian Hernandez",
     "Maggie Blank",
@@ -68,8 +67,6 @@
     "Fiona Petre",
     "Bella Springer"
   ],
-  "actor_roles": {
-    "The SpongeBob Musical Cast List": [],
     "Kyla Bassler": [
       "SPONGEBOB"
     ],
@@ -334,3 +331,4 @@
     "Bella Springer": []
   }
 }
+
