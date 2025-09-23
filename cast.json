@@ -1,0 +1,336 @@
+{
+  "actors": [
+    "The SpongeBob Musical Cast List",
+    "Kyla Bassler",
+    "Tavian Hernandez",
+    "Maggie Blank",
+    "Ben Blank",
+    "Gideon Martinez",
+    "Emily Springer",
+    "Aden Cass",
+    "Lucy Pann",
+    "Lydia Radewahn",
+    "Joie Pendolino",
+    "Isabelle Martinez",
+    "Ainsley Gann",
+    "Charlie Johnson",
+    "Brody Konopka",
+    "Tessa Ver Kuilen",
+    "Ryan Spitzer",
+    "Jacob Springer",
+    "Violet Pann",
+    "Talia Bast",
+    "Antonio Corchado",
+    "Selah Masik",
+    "Lucas Schmidt",
+    "Leah Parker",
+    "Sophia Kapusta",
+    "Sophie Smith-McCullough",
+    "Isabelle Hoormann",
+    "Elianna Clauser",
+    "Norah Cronin",
+    "Abby Gahagan",
+    "Griffin Geiger",
+    "Jack Kirkley",
+    "Noah Maldonado",
+    "Noah Nokovic",
+    "Olivia Pittman",
+    "Julia Shane",
+    "Zoey Tesch",
+    "Delaney Ferrell",
+    "Lily Jester",
+    "Nadia Mayr",
+    "Chloe Olson",
+    "Nick Boehm",
+    "Caroline Cutts",
+    "Josie Cutts",
+    "Violet Matias",
+    "Evy Pittman",
+    "Lilli Schwartz",
+    "Malachi Gann",
+    "Connor Ver Kuilen",
+    "William Cass",
+    "Zoe Clauser",
+    "Anna Dohrmann",
+    "Juliet Dohrmann",
+    "Briella Oestreich",
+    "Halle Schwartz",
+    "Glory Jane Carpenter",
+    "Cayli Cavender",
+    "John Clauser",
+    "Hazel Matias",
+    "Lydia Pittman",
+    "Piper Tesch",
+    "Evy Ferrell",
+    "Sofia Jester",
+    "Maddy Lange",
+    "Ellie Marki",
+    "Fiona Petre",
+    "Bella Springer"
+  ],
+  "actor_roles": {
+    "The SpongeBob Musical Cast List": [],
+    "Kyla Bassler": [
+      "SPONGEBOB"
+    ],
+    "Tavian Hernandez": [
+      "PATRICK STAR"
+    ],
+    "Maggie Blank": [
+      "SANDY CHEEKS"
+    ],
+    "Ben Blank": [
+      "SQUIDWARD",
+      "SARDINES - SOLOIST, BACKSTAGE",
+      "PIRATES"
+    ],
+    "Gideon Martinez": [
+      "PLANKTON",
+      "SEA ANEMONE SINGERS"
+    ],
+    "Emily Springer": [
+      "KAREN"
+    ],
+    "Aden Cass": [
+      "MR KRABS",
+      "SEA ANEMONE SINGERS"
+    ],
+    "Lucy Pann": [
+      "PEARL KRABS",
+      "SEA ANEMONE SINGERS"
+    ],
+    "Lydia Radewahn": [
+      "PATCHY THE PIRATE"
+    ],
+    "Joie Pendolino": [
+      "ELECTRIC SKATE/GIRL FISH 1",
+      "PLANKTON POSSE - HIP HOP",
+      "SEA ANEMONE SINGERS"
+    ],
+    "Isabelle Martinez": [
+      "ELECTRIC SKATE/GIRL FISH 2",
+      "PLANKTON POSSE - HIP HOP",
+      "SEA ANEMONE SINGERS"
+    ],
+    "Ainsley Gann": [
+      "ELECTRIC SKATE/GIRL FISH 3",
+      "SEA ANEMONE SINGERS",
+      "SECURITY GUARD 2"
+    ],
+    "Charlie Johnson": [
+      "FRENCH NARRATOR",
+      "SARDINES - SOLOIST, BACKSTAGE",
+      "SEA ANEMONE SINGERS",
+      "PIRATES"
+    ],
+    "Brody Konopka": [
+      "PERCH PERKINS",
+      "SEA ANEMONE SINGERS",
+      "PIRATES",
+      "ALANTIC ENSEMBLE",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Tessa Ver Kuilen": [
+      "MAYOR OF BIKINI BOTTOM",
+      "SEA ANEMONE TAPPERS",
+      "ALANTIC ENSEMBLE"
+    ],
+    "Ryan Spitzer": [
+      "LARRY THE LOBSTER",
+      "SEA ANEMONE SINGERS",
+      "PIRATES",
+      "ALANTIC ENSEMBLE",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Jacob Springer": [
+      "OLD MAN JENKINS",
+      "SEA ANEMONE SINGERS",
+      "PIRATES",
+      "ALANTIC ENSEMBLE"
+    ],
+    "Violet Pann": [
+      "MRS PUFF",
+      "ALANTIC ENSEMBLE",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Talia Bast": [
+      "PLANKTON POSSE - HIP HOP",
+      "SARDINES - SOLOIST, BACKSTAGE",
+      "SEA ANEMONE TAPPERS"
+    ],
+    "Antonio Corchado": [
+      "PLANKTON POSSE - HIP HOP",
+      "SARDINES - SOLOIST, BACKSTAGE",
+      "SEA ANEMONE TAPPERS",
+      "PIRATES",
+      "COWBOY FISH 1"
+    ],
+    "Selah Masik": [
+      "PLANKTON POSSE - HIP HOP",
+      "SARDINE 1",
+      "SEA ANEMONE TAPPERS"
+    ],
+    "Lucas Schmidt": [
+      "PLANKTON POSSE - HIP HOP",
+      "SEA ANEMONE TAPPERS"
+    ],
+    "Leah Parker": [
+      "SARDINE 2",
+      "SEA ANEMONE SINGERS",
+      "TEEN FAN 1",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Sophia Kapusta": [
+      "SARDINE 3"
+    ],
+    "Sophie Smith-McCullough": [
+      "SARDINE 4"
+    ],
+    "Isabelle Hoormann": [
+      "SARDINE 5",
+      "SEA ANEMONE SINGERS",
+      "ANOTHER FISH/MOB FISH",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Elianna Clauser": [
+      "SARDINES - SOLOIST, BACKSTAGE",
+      "SEA ANEMONE SINGERS"
+    ],
+    "Norah Cronin": [
+      "SARDINES - SOLOIST, BACKSTAGE",
+      "TEEN FAN 2",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Abby Gahagan": [
+      "SARDINES - SOLOIST, BACKSTAGE",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Griffin Geiger": [
+      "SARDINES - SOLOIST, BACKSTAGE",
+      "COWBOY FISH 3",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Jack Kirkley": [
+      "SEA ANEMONE SINGERS",
+      "PIRATES",
+      "JOHNNY THE BARTENDER",
+      "COWBOY FISH 2",
+      "ALANTIC ENSEMBLE",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Noah Maldonado": [
+      "SEA ANEMONE SINGERS",
+      "SECURITY GUARD 1"
+    ],
+    "Noah Nokovic": [
+      "ALANTIC ENSEMBLE"
+    ],
+    "Olivia Pittman": [],
+    "Julia Shane": [
+      "PACIFIC ENSEMBLE"
+    ],
+    "Zoey Tesch": [],
+    "Delaney Ferrell": [
+      "SEA ANEMONE TAPPERS"
+    ],
+    "Lily Jester": [
+      "SEA ANEMONE TAPPERS"
+    ],
+    "Nadia Mayr": [
+      "SEA ANEMONE TAPPERS"
+    ],
+    "Chloe Olson": [
+      "SEA ANEMONE TAPPERS"
+    ],
+    "Nick Boehm": [
+      "SEA ANEMONE SINGERS",
+      "FOLEY FISH",
+      "ALANTIC ENSEMBLE",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Caroline Cutts": [
+      "SEA ANEMONE SINGERS"
+    ],
+    "Josie Cutts": [
+      "SEA ANEMONE SINGERS",
+      "PIRATES"
+    ],
+    "Violet Matias": [
+      "PIRATES"
+    ],
+    "Evy Pittman": [
+      "TEEN FAN 3",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Lilli Schwartz": [],
+    "Malachi Gann": [
+      "PIRATES",
+      "A FISH",
+      "ALANTIC ENSEMBLE",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Connor Ver Kuilen": [
+      "PIRATES",
+      "BUSTER BLUE TANG",
+      "ALANTIC ENSEMBLE"
+    ],
+    "William Cass": [
+      "PIRATES",
+      "ALANTIC ENSEMBLE"
+    ],
+    "Zoe Clauser": [
+      "PIRATES",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Anna Dohrmann": [
+      "PIRATES",
+      "PACIFIC ENSEMBLE"
+    ],
+    "Juliet Dohrmann": [
+      "PIRATES",
+      "ALANTIC ENSEMBLE"
+    ],
+    "Briella Oestreich": [
+      "PIRATES",
+      "ALANTIC ENSEMBLE"
+    ],
+    "Halle Schwartz": [
+      "GARY THE SNAIL",
+      "ALANTIC ENSEMBLE"
+    ],
+    "Glory Jane Carpenter": [
+      "ALANTIC ENSEMBLE"
+    ],
+    "Cayli Cavender": [
+      "ALANTIC ENSEMBLE"
+    ],
+    "John Clauser": [
+      "ALANTIC ENSEMBLE"
+    ],
+    "Hazel Matias": [
+      "ALANTIC ENSEMBLE"
+    ],
+    "Lydia Pittman": [
+      "ALANTIC ENSEMBLE"
+    ],
+    "Piper Tesch": [
+      "ALANTIC ENSEMBLE"
+    ],
+    "Evy Ferrell": [
+      "PACIFIC ENSEMBLE"
+    ],
+    "Sofia Jester": [
+      "PACIFIC ENSEMBLE"
+    ],
+    "Maddy Lange": [
+      "PACIFIC ENSEMBLE"
+    ],
+    "Ellie Marki": [
+      "PACIFIC ENSEMBLE"
+    ],
+    "Fiona Petre": [
+      "PACIFIC ENSEMBLE"
+    ],
+    "Bella Springer": []
+  }
+}

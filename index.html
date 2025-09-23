@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYT Milwaukee Rehearsal Checker</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --accent: #e74c3c;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+      --success: #2ecc71;
+      --warning: #f39c12;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--secondary);
+    }
+    
+    h1 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+    
+    .subtitle {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      padding: 20px;
+      transition: var(--transition);
+    }
+    
+    .card:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    select, input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    select:focus, input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+    
+    #actors {
+      height: 200px;
+    }
+    
+    .date-inputs {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: var(--border-radius);
+      margin-bottom: 15px;
+    }
+    
+    button {
+      background-color: var(--secondary);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: var(--transition);
+      width: 100%;
+      margin-top: 10px;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+    
+    #results {
+      margin-top: 30px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: var(--box-shadow);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+    }
+    
+    th {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    tr:hover {
+      background-color: #e8f4fc;
+    }
+    
+    .no-results {
+      text-align: center;
+      padding: 30px;
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      color: #666;
+    }
+    
+    .info-box {
+      background-color: #e8f4fc;
+      border-left: 4px solid var(--secondary);
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CYT Milwaukee Rehearsal Checker</h1>
+    <p class="subtitle">Select child(ren) and date option to see calls (only shows dates where called). Rehearsals: Fridays 5:30pm-9pm, Saturdays 9:30am-2pm.</p>
+  </header>
+  
+  <div class="info-box">
+    <strong>Tip:</strong> Hold Ctrl (or Cmd on Mac) to select multiple children.
+  </div>
+  
+  <div class="container">
+    <div class="card">
+      <label for="actors">Select Child(ren):</label>
+      <select id="actors" multiple size="10"></select>
+    </div>
+    
+    <div class="card">
+      <label for="dateMode">Date Option:</label>
+      <select id="dateMode">
+        <option value="current">Current Week</option>
+        <option value="range">Specific Range</option>
+        <option value="all">All Dates</option>
+      </select>
+      
+      <div id="currentWeekInputs" class="date-inputs">
+        <label for="friday">Friday Date:</label>
+        <input type="date" id="friday">
+        <label for="saturday">Saturday Date:</label>
+        <input type="date" id="saturday">
+      </div>
+      
+      <div id="rangeInputs" class="date-inputs">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate">
+      </div>
+      
+      <button onclick="checkSchedule()">Check Schedule</button>
+    </div>
+  </div>
+  
+  <div id="results"></div>
+  
+  <footer>
+    <p>CYT Milwaukee &copy; <span id="currentYear"></span> | Rehearsal Schedule Checker</p>
+  </footer>
+  
+  <script>
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    let cast = {};
+    let schedules = {};
+    let mappings = {};
+    
+    // Load JSON files
+    Promise.all([
+      fetch('cast.json').then(res => res.json()),
+      fetch('schedules.json').then(res => res.json()),
+      fetch('group_mappings.json').then(res => res.json())
+    ]).then(([castData, scheduleData, mappingData]) => {
+      cast = castData;
+      schedules = scheduleData;
+      mappings = mappingData;
+      
+      // Sort actors by last name
+      const sortedActors = cast.actors.sort((a, b) => {
+        const lastNameA = a.split(' ').pop().toLowerCase();
+        const lastNameB = b.split(' ').pop().toLowerCase();
+        return lastNameA.localeCompare(lastNameB);
+      });
+      
+      // Populate actors dropdown with sorted list
+      const actorSelect = document.getElementById('actors');
+      sortedActors.forEach(actor => {
+        const option = document.createElement('option');
+        option.value = actor;
+        option.textContent = actor;
+        actorSelect.appendChild(option);
+      });
+      
+      // Default to current week
+      setDefaultDates();
+      toggleInputs();
+      
+      // Listen for mode change
+      document.getElementById('dateMode').addEventListener('change', toggleInputs);
+    });
+    
+    function toggleInputs() {
+      const mode = document.getElementById('dateMode').value;
+      document.getElementById('currentWeekInputs').style.display = mode === 'current' ? 'block' : 'none';
+      document.getElementById('rangeInputs').style.display = mode === 'range' ? 'block' : 'none';
+    }
+    
+    function setDefaultDates() {
+      const today = new Date();
+      const day = today.getDay();
+      const diffToFriday = (5 - day + 7) % 7;
+      const friday = new Date(today);
+      friday.setDate(today.getDate() + diffToFriday);
+      const saturday = new Date(friday);
+      saturday.setDate(friday.getDate() + 1);
+      
+      document.getElementById('friday').value = friday.toISOString().split('T')[0];
+      document.getElementById('saturday').value = saturday.toISOString().split('T')[0];
+      
+      document.getElementById('startDate').value = '';
+      document.getElementById('endDate').value = '';
+    }
+    
+    function checkSchedule() {
+      const selectedActors = Array.from(document.getElementById('actors').selectedOptions).map(opt => opt.value);
+      const mode = document.getElementById('dateMode').value;
+      
+      if (selectedActors.length === 0) {
+        alert('Please select at least one child.');
+        return;
+      }
+      
+      let dates = [];
+      if (mode === 'all') {
+        dates = Object.keys(schedules).sort();
+      } else if (mode === 'range') {
+        const start = document.getElementById('startDate').value;
+        const end = document.getElementById('endDate').value;
+        if (!start || !end) {
+          alert('Please select both start and end dates.');
+          return;
+        }
+        dates = Object.keys(schedules).filter(d => d >= start && d <= end).sort();
+        console.log('Range dates:', dates); // Debug: log dates being checked
+      } else { // current
+        const friday = document.getElementById('friday').value;
+        const saturday = document.getElementById('saturday').value;
+        dates = [friday, saturday].filter(d => d);
+      }
+      
+      const results = [];
+      selectedActors.forEach(actor => {
+        const actorRoles = cast.actor_roles[actor] || [];
+        dates.forEach(date => {
+          if (schedules[date]) {
+            const calls = schedules[date].filter(slot => {
+              if (slot.groups.includes('FULL CAST')) return true;
+              return slot.groups.some(group => actorRoles.includes(group));
+            }).map(slot => slot.time);
+            if (calls.length > 0) {
+              results.push({ date, actor, calls });
+              console.log(`Actor: ${actor}, Date: ${date}, Calls: ${calls}`); // Debug: log each match
+            }
+          }
+        });
+      });
+      
+      if (results.length === 0) {
+        document.getElementById('results').innerHTML = `
+          <div class="no-results">
+            <h3>No Rehearsals Found</h3>
+            <p>No calls in the selected dates/range (or no schedule data yet).</p>
+          </div>
+        `;
+        console.log('No results found for dates:', dates); // Debug: log if no results
+        return;
+      }
+      
+      displayResults(results);
+    }
+    
+    function displayResults(results) {
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+      const table = document.createElement('table');
+      table.innerHTML = '<tr><th>Date</th><th>Actor</th><th>Call Times</th></tr>';
+      results.forEach(res => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${res.date}</td><td>${res.actor}</td><td>${res.calls.join('<br>')}</td>`;
+        table.appendChild(row);
+      });
+      resultsDiv.appendChild(table);
+    }
+  </script>
+</body>
+</html>
