@@ -1,0 +1,21 @@
+# Get base folder (parent of the Update folder where this script lives)
+$BaseDir = Split-Path $PSScriptRoot -Parent
+
+# Define paths
+$CallScheduleFile = Join-Path $BaseDir "Call_Schedule\CallSchedule.txt"
+$UpdateScript = Join-Path $BaseDir "update_schedules.py"
+
+# Check if CallSchedule.txt exists
+if (-Not (Test-Path $CallScheduleFile)) {
+    Write-Error "ERROR: CallSchedule.txt needs to be in $CallScheduleFile"
+    exit 1
+}
+
+# Run update_schedules.py using Python
+try {
+    & python $UpdateScript
+}
+catch {
+    Write-Error "Error while running update_schedules.py: $_"
+    exit 1
+}
