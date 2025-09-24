@@ -1,4 +1,3 @@
-
 {
   "actors": [
     "Kyla Bassler",
@@ -68,7 +67,7 @@
     "Fiona Petre",
     "Bella Springer"
   ],
-"actor_roles": {
+  "actor_roles": {
     "Kyla Bassler": [
       "SPONGEBOB"
     ],
@@ -91,7 +90,7 @@
       "KAREN"
     ],
     "Aden Cass": [
-      "MR KRABS",
+      "MR. KRABS",
       "SEA ANEMONE SINGERS"
     ],
     "Lucy Pann": [
@@ -99,57 +98,68 @@
       "SEA ANEMONE SINGERS"
     ],
     "Lydia Radewahn": [
-      "PATCHY THE PIRATE"
+      "PATCHY THE PIRATE",
+      "SARDINES"
     ],
     "Joie Pendolino": [
-      "ELECTRIC SKATE/GIRL FISH 1",
+      "ELECTRIC SKATES",
       "PLANKTON POSSE",
       "SEA ANEMONE SINGERS"
     ],
     "Isabelle Martinez": [
-      "ELECTRIC SKATE/GIRL FISH 2",
+      "ELECTRIC SKATES",
       "PLANKTON POSSE",
       "SEA ANEMONE SINGERS"
     ],
     "Ainsley Gann": [
-      "ELECTRIC SKATE/GIRL FISH 3",
+      "ELECTRIC SKATES",
       "SEA ANEMONE SINGERS",
-      "SECURITY GUARD 2"
+      "SECURITY GUARD 2",
+      "PIRATES"
     ],
     "Charlie Johnson": [
       "FRENCH NARRATOR",
+      "ELECTRIC SKATES",
       "SARDINES",
       "SEA ANEMONE SINGERS",
       "PIRATES"
     ],
     "Brody Konopka": [
       "PERCH PERKINS",
+      "ELECTRIC SKATES",
       "SEA ANEMONE SINGERS",
       "PIRATES",
-      "ALANTIC ENSEMBLE",
+      "ATLANTIC ENSEMBLE",
       "PACIFIC ENSEMBLE"
     ],
     "Tessa VerKuilen": [
       "MAYOR OF BIKINI BOTTOM",
+      "ELECTRIC SKATES",
       "SEA ANEMONE TAPPERS",
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE",
+      "PACIFIC ENSEMBLE"
     ],
     "Ryan Spitzer": [
       "LARRY THE LOBSTER",
+      "ELECTRIC SKATES",
+      "SARDINES",
       "SEA ANEMONE SINGERS",
       "PIRATES",
-      "ALANTIC ENSEMBLE",
+      "ATLANTIC ENSEMBLE",
       "PACIFIC ENSEMBLE"
     ],
     "Jacob Springer": [
       "OLD MAN JENKINS",
+      "ELECTRIC SKATES",
+      "SARDINES",
       "SEA ANEMONE SINGERS",
       "PIRATES",
-      "ALANTIC ENSEMBLE"
+      "PACIFIC ENSEMBLE"
     ],
     "Violet Pann": [
-      "MRS PUFF",
-      "ALANTIC ENSEMBLE",
+      "MRS. PUFF",
+      "ELECTRIC SKATES",
+      "ATLANTIC ENSEMBLE",
       "PACIFIC ENSEMBLE"
     ],
     "Talia Bast": [
@@ -166,38 +176,48 @@
     ],
     "Selah Masik": [
       "PLANKTON POSSE",
-      "SARDINE 1",
-      "SEA ANEMONE TAPPERS"
+      "SARDINES",
+      "SEA ANEMONE TAPPERS",
+      "SARDINES-20251004-900am130pm"
     ],
     "Lucas Schmidt": [
       "PLANKTON POSSE",
+      "SARDINES",
       "SEA ANEMONE TAPPERS"
     ],
     "Leah Parker": [
-      "SARDINE 2",
+      "SARDINES",
       "SEA ANEMONE SINGERS",
       "TEEN FAN 1",
-      "PACIFIC ENSEMBLE"
+      "PIRATES",
+      "PACIFIC ENSEMBLE",
+      "SARDINES-20251004-900am130pm"
     ],
     "Sophia Kapusta": [
-      "SARDINE 3"
+      "SARDINES",
+      "SARDINES-20251004-900am130pm"
     ],
     "Sophie Smith-McCullough": [
-      "SARDINE 4"
+      "SARDINES",
+      "SEA ANEMONE TAPPERS",
+      "SARDINES-20251004-900am130pm"
     ],
     "Isabelle Hoormann": [
-      "SARDINE 5",
+      "SARDINES",
       "SEA ANEMONE SINGERS",
       "ANOTHER FISH/MOB FISH",
-      "PACIFIC ENSEMBLE"
+      "PIRATES",
+      "PACIFIC ENSEMBLE",
+      "SARDINES-20251004-900am130pm"
     ],
     "Elianna Clauser": [
       "SARDINES",
-      "SEA ANEMONE SINGERS"
+      "SPONGE DANCERS"
     ],
     "Norah Cronin": [
       "SARDINES",
       "TEEN FAN 2",
+      "PIRATES",
       "PACIFIC ENSEMBLE"
     ],
     "Abby Gahagan": [
@@ -207,75 +227,97 @@
     "Griffin Geiger": [
       "SARDINES",
       "COWBOY FISH 3",
+      "PIRATES",
       "PACIFIC ENSEMBLE"
     ],
     "Jack Kirkley": [
+      "SARDINES",
       "SEA ANEMONE SINGERS",
       "PIRATES",
       "JOHNNY THE BARTENDER",
       "COWBOY FISH 2",
-      "ALANTIC ENSEMBLE",
+      "ATLANTIC ENSEMBLE",
       "PACIFIC ENSEMBLE"
     ],
     "Noah Maldonado": [
+      "SARDINES",
       "SEA ANEMONE SINGERS",
-      "SECURITY GUARD 1"
+      "SECURITY GUARD 1",
+      "PIRATES"
     ],
     "Noah Nokovic": [
-      "ALANTIC ENSEMBLE"
+      "SARDINES",
+      "ATLANTIC ENSEMBLE"
     ],
-    "Olivia Pittman": [],
+    "Olivia Pittman": [
+      "SARDINES",
+      "SPONGE DANCERS"
+    ],
     "Julia Shane": [
+      "SARDINES",
       "PACIFIC ENSEMBLE"
     ],
-    "Zoey Tesch": [],
+    "Zoey Tesch": [
+      "SARDINES",
+      "PACIFIC ENSEMBLE"
+    ],
     "Delaney Ferrell": [
-      "SEA ANEMONE TAPPERS"
+      "SEA ANEMONE TAPPERS",
+      "SPONGE DANCERS"
     ],
     "Lily Jester": [
-      "SEA ANEMONE TAPPERS"
+      "SEA ANEMONE TAPPERS",
+      "SPONGE DANCERS"
     ],
     "Nadia Mayr": [
-      "SEA ANEMONE TAPPERS"
+      "SEA ANEMONE TAPPERS",
+      "SPONGE DANCERS"
     ],
     "Chloe Olson": [
-      "SEA ANEMONE TAPPERS"
+      "SEA ANEMONE TAPPERS",
+      "SPONGE DANCERS"
     ],
     "Nick Boehm": [
-      "SEA ANEMONE SINGERS",
+      "SPONGE DANCERS",
       "FOLEY FISH",
-      "ALANTIC ENSEMBLE",
+      "PIRATES",
+      "ATLANTIC ENSEMBLE",
       "PACIFIC ENSEMBLE"
     ],
     "Caroline Cutts": [
-      "SEA ANEMONE SINGERS"
+      "SPONGE DANCERS"
     ],
     "Josie Cutts": [
-      "SEA ANEMONE SINGERS",
+      "SPONGE DANCERS",
       "PIRATES"
     ],
     "Violet Matias": [
+      "SPONGE DANCERS",
       "PIRATES"
     ],
     "Evy Pittman": [
+      "SPONGE DANCERS",
       "TEEN FAN 3",
+      "PIRATES",
       "PACIFIC ENSEMBLE"
     ],
-    "Lilli Schwartz": [],
+    "Lilli Schwartz": [
+      "SPONGE DANCERS"
+    ],
     "Malachi Gann": [
       "PIRATES",
-      "A FISH",
-      "ALANTIC ENSEMBLE",
+      "ATLANTIC ENSEMBLE",
       "PACIFIC ENSEMBLE"
     ],
     "Connor VerKuilen": [
       "PIRATES",
       "BUSTER BLUE TANG",
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE",
+      "PACIFIC ENSEMBLE"
     ],
     "William Cass": [
       "PIRATES",
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "Zoe Clauser": [
       "PIRATES",
@@ -287,33 +329,34 @@
     ],
     "Juliet Dohrmann": [
       "PIRATES",
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "Briella Oestreich": [
       "PIRATES",
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "Halle Schwartz": [
       "GARY THE SNAIL",
-      "ALANTIC ENSEMBLE"
+      "PIRATES",
+      "ATLANTIC ENSEMBLE"
     ],
     "Glory Jane Carpenter": [
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "Cayli Cavender": [
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "John Clauser": [
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "Hazel Matias": [
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "Lydia Pittman": [
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "Piper Tesch": [
-      "ALANTIC ENSEMBLE"
+      "ATLANTIC ENSEMBLE"
     ],
     "Evy Ferrell": [
       "PACIFIC ENSEMBLE"
@@ -330,8 +373,8 @@
     "Fiona Petre": [
       "PACIFIC ENSEMBLE"
     ],
-    "Bella Springer": []
+    "Bella Springer": [
+      "PACIFIC ENSEMBLE"
+    ]
   }
 }
-
-
