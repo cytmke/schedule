@@ -347,16 +347,20 @@
               if (slot.groups.includes('FULL CAST')) {
                 callLabel = `FULL CAST ${callLabel}`;
               } else {
-                const group = slot.groups.find(g => g !== actor && (g.match(/^[A-Z\s-]+-\d{8}-[\dampm-]+$/) || Object.keys(mappings).includes(g)));
-                if (group) {
-                  if (group.match(/^[A-Z\s-]+-\d{8}-[\dampm-]+$/)) {
-                    callLabel = `${group.split('-')[0]} ${callLabel}`;
-                  } else if (mappings[group]) {
-                    callLabel = `${group} ${callLabel}`;
-                  }
+                const matchingRole = actorRoles.find(role => slot.groups.includes(role.toUpperCase()));
+                if (matchingRole) {
+                  callLabel = `${matchingRole} ${callLabel}`;
                 } else {
-                  const role = actorRoles.find(r => slot.groups.includes(r)) || actor;
-                  callLabel = `${role} ${callLabel}`;
+                  const group = slot.groups.find(g => g !== actor && (g.match(/^[A-Z\s-]+-\d{8}-[\dampm-]+$/) || Object.keys(mappings).includes(g)));
+                  if (group) {
+                    if (group.match(/^[A-Z\s-]+-\d{8}-[\dampm-]+$/)) {
+                      callLabel = `${group.split('-')[0]} ${callLabel}`;
+                    } else if (mappings[group]) {
+                      callLabel = `${group} ${callLabel}`;
+                    }
+                  } else {
+                    callLabel = `${actor} ${callLabel}`;
+                  }
                 }
               }
               return callLabel;
