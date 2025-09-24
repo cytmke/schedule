@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedule Editor</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    select, button { margin: 5px; padding: 5px; }
+    .time-slot { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+    .group { margin-left: 20px; }
+    .actor { margin-left: 30px; }
+    .confirm-btn { margin-left: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Schedule Editor</h2>
+  <label for="dateSelect">Select Date:</label>
+  <select id="dateSelect" onchange="loadTimeSlots()"></select>
+  <div id="timeSlots"></div>
+  <div id="addActor">
+    <label for="newActor">Add Actor:</label>
+    <input type="text" id="newActor" list="actorList" placeholder="Enter actor name">
+    <datalist id="actorList"></datalist>
+    <button onclick="addActor()">Add</button>
+  </div>
+  <button onclick="saveSchedule()">Save Changes</button>
+
+  <script>
+    let schedule = {};
+    let cast = { actors: [], actor_roles: {} };
+    let groupMappings = {};
+
+    // Load JSON files
+    fetch('schedules.json')
+      .then(response => response.json())
+      .then(data => {
+        schedule = data;
+        populateDateSelect();
+      });
+    fetch('cast.json')
+      .then(response => response.json())
+      .then(data => {
+        cast.actors = data.actors || [];
+        cast.actor_roles = data.actor_roles || {};
+      });
+    fetch('group_mappings.json')
+      .then(response => response.json())
+      .then(data => groupMappings = data);
+
+    function populateDateSelect() {
+      const dateSelect = document.getElementById('dateSelect');
+      dateSelect.innerHTML = '<option value="">Select a date</option>';
+      Object.keys(schedule).sort().forEach(date => {
+        const [year, month, day] = date.split('-');
+        const dateObj = new Date(year, month - 1, day);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = dateObj.toLocaleDateString('en-US', options);
+        const option = document.createElement('option');
+        option.value = date;
+        option.textContent = formattedDate;
+        dateSelect.appendChild(option);
+      });
+      loadTimeSlots();
+    }
+
+    function loadTimeSlots() {
+      const dateSelect = document.getElementById('dateSelect');
+      const timeSlotsDiv = document.getElementById('timeSlots');
+      timeSlotsDiv.innerHTML = '';
+      const selectedDate = dateSelect.value;
+      if (!selectedDate || !schedule[selectedDate]) return;
+
+      schedule[selectedDate].forEach((slot, index) => {
+        const timeSlotDiv = document.createElement('div');
+        timeSlotDiv.className = 'time-slot';
+        timeSlotDiv.innerHTML = `<h3>Time: ${slot.time} <button onclick="removeSlot(${index})">Remove</button></h3>`;
+
+        const selectedActors = new Set();
+
+        Object.keys(groupMappings).forEach(group => {
+          if (slot.groups.includes(group)) {
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'group';
+            groupDiv.innerHTML = `<strong>${group}</strong>`;
+            let hasCheckedActor = false;
+            const checkedActors = [];
+            Object.entries(cast.actor_roles).forEach(([actor, roles]) => {
+              if (roles.includes(group)) {
+                selectedActors.add(actor);
+                const actorDiv = document.createElement('div');
+                actorDiv.className = 'actor';
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = slot.groups.includes(actor);
+                checkbox.onchange = () => updateActor(selectedDate, index, actor, checkbox.checked, group, slot.time);
+                actorDiv.appendChild(checkbox);
+                actorDiv.appendChild(document.createTextNode(actor));
+                groupDiv.appendChild(actorDiv);
+                if (checkbox.checked) {
+                  hasCheckedActor = true;
+                  checkedActors.push(actor);
+                }
+              }
+            });
+            if (hasCheckedActor && checkedActors.length < Object.entries(cast.actor_roles).filter(([_, roles]) => roles.includes(group)).length) {
+              const confirmBtn = document.createElement('button');
+              confirmBtn.className = 'confirm-btn';
+              confirmBtn.textContent = 'Confirm Subset';
+              confirmBtn.onclick = () => confirmSubset(selectedDate, index, group, checkedActors, slot.time);
+              groupDiv.appendChild(confirmBtn);
+            }
+            timeSlotDiv.appendChild(groupDiv);
+          }
+        });
+
+        slot.groups.forEach(actor => {
+          if (!Object.values(groupMappings).includes(actor) && !selectedActors.has(actor)) {
+            const actorDiv = document.createElement('div');
+            actorDiv.className = 'actor';
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = true;
+            checkbox.onchange = () => updateIndividual(selectedDate, index, actor, checkbox.checked);
+            actorDiv.appendChild(checkbox);
+            actorDiv.appendChild(document.createTextNode(actor));
+            timeSlotDiv.appendChild(actorDiv);
+          }
+        });
+
+        timeSlotsDiv.appendChild(timeSlotDiv);
+      });
+
+      const actorList = document.getElementById('actorList');
+      actorList.innerHTML = '';
+      cast.actors.forEach(actor => {
+        const option = document.createElement('option');
+        option.value = actor;
+        actorList.appendChild(option);
+      });
+    }
+
+    function updateActor(date, index, actor, checked, group, time) {
+      const slot = schedule[date][index];
+      if (checked) {
+        if (!slot.groups.includes(actor)) slot.groups.push(actor);
+      } else {
+        if (slot.groups.includes(actor)) slot.groups = slot.groups.filter(g => g !== actor);
+      }
+      loadTimeSlots();
+    }
+
+    function confirmSubset(date, index, oldGroup, checkedActors, time) {
+      const slot = schedule[date][index];
+      if (checkedActors.length === 0) return;
+
+      const newGroup = `${oldGroup}-${date.replace(/-/g, '')}-${time.replace(/:/g, '').replace('-', '')}`;
+      // Remove original group from this slot only
+      if (slot.groups.includes(oldGroup)) slot.groups = slot.groups.filter(g => g !== oldGroup);
+      // Add new group if not present
+      if (!slot.groups.includes(newGroup)) slot.groups.push(newGroup);
+      // Remove individual actors from this slot, relying on the new group
+      slot.groups = slot.groups.filter(g => !cast.actors.includes(g) || g === newGroup);
+      // Update cast.json to add new group without removing old group
+      checkedActors.forEach(actor => {
+        if (!cast.actor_roles[actor].includes(newGroup)) cast.actor_roles[actor].push(newGroup);
+      });
+      // Update group_mappings.json
+      if (!groupMappings[newGroup]) groupMappings[newGroup] = newGroup;
+
+      loadTimeSlots();
+    }
+
+    function updateIndividual(date, index, actor, checked) {
+      const slot = schedule[date][index];
+      if (checked) {
+        if (!slot.groups.includes(actor)) slot.groups.push(actor);
+      } else {
+        if (slot.groups.includes(actor)) slot.groups = slot.groups.filter(g => g !== actor);
+      }
+      loadTimeSlots();
+    }
+
+    function addActor() {
+      const dateSelect = document.getElementById('dateSelect');
+      const newActorInput = document.getElementById('newActor');
+      const selectedDate = dateSelect.value;
+      if (!selectedDate || !schedule[selectedDate] || !newActorInput.value) return;
+
+      const timeSlotDivs = document.getElementsByClassName('time-slot');
+      if (timeSlotDivs.length > 0) {
+        const index = 0;
+        const slot = schedule[selectedDate][index];
+        if (!slot.groups.includes(newActorInput.value) && !cast.actors.includes(newActorInput.value)) {
+          slot.groups.push(newActorInput.value);
+          cast.actors.push(newActorInput.value);
+          cast.actor_roles[newActorInput.value] = [];
+          console.log(`Added actor: ${selectedDate}, ${slot.time}, ${slot.groups}`);
+        }
+      }
+      newActorInput.value = '';
+      loadTimeSlots();
+    }
+
+    function removeSlot(index) {
+      const dateSelect = document.getElementById('dateSelect');
+      const selectedDate = dateSelect.value;
+      if (selectedDate && schedule[selectedDate]) {
+        schedule[selectedDate].splice(index, 1);
+        if (schedule[selectedDate].length === 0) delete schedule[selectedDate];
+        loadTimeSlots();
+        populateDateSelect();
+      }
+    }
+
+    function saveSchedule() {
+      const zip = new JSZip();
+      zip.file('schedules.json', JSON.stringify(schedule, null, 2));
+      zip.file('cast.json', JSON.stringify(cast, null, 2));
+      zip.file('group_mappings.json', JSON.stringify(groupMappings, null, 2));
+      zip.generateAsync({ type: 'blob' }).then(content => {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(content);
+        link.download = 'schedule_updates.zip';
+        link.click();
+        alert('Schedule updates saved as schedule_updates.zip. Please extract and replace the original files.');
+      });
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</body>
+</html>
