@@ -21,6 +21,12 @@
   ],
   "2025-09-13": [
     {
+      "time": "9:00-9:25",
+      "groups": [
+        "FULL CAST (OPTIONAL)"
+      ]
+    },
+    {
       "time": "9:30-2:00",
       "groups": [
         "FULL CAST"
@@ -45,7 +51,7 @@
     {
       "time": "5:30-8:30",
       "groups": [
-        "MR KRABS",
+        "MR. KRABS",
         "PEARL",
         "PLANKTON",
         "KAREN"
@@ -66,7 +72,7 @@
         "SANDY",
         "LARRY THE LOBSTER",
         "OLD MAN JENKINS",
-        "MRS PUFF",
+        "MRS. PUFF",
         "BUSTER BLUETANG",
         "JOHNNY THE BARTENDER",
         "FOLEY FISH",
@@ -84,7 +90,202 @@
   ],
   "2025-09-20": [
     {
-      "time": "9:30-2:00",
+      "time": "9:00am-2:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-09-26": [
+    {
+      "time": "5:30-9:00pm",
+      "groups": [
+        "ELECTRIC SKATES"
+      ]
+    },
+    {
+      "time": "5:30-7:30pm",
+      "groups": [
+        "SPONGE DANCERS"
+      ]
+    },
+    {
+      "time": "5:30-7:45pm",
+      "groups": [
+        "PATRICK",
+        "SARDINES"
+      ]
+    },
+    {
+      "time": "6:45-9:00",
+      "groups": [
+        "SQUIDWARD"
+      ]
+    },
+    {
+      "time": "7:30-9:00pm",
+      "groups": [
+        "SANDY",
+        "MR. KRABS",
+        "PEARL",
+        "FRENCH NARRATOR",
+        "PERCH PERKINS",
+        "MAYOR",
+        "LARRY THE LOBSTER",
+        "OLD MAN JENKINS",
+        "MRS. PUFF",
+        "BUSTER BLUETANG",
+        "JOHNNY THE BARTENDER",
+        "FOLEY FISH",
+        "A FISH",
+        "ANOTHER FISH/MOB FISH",
+        "SEA ANEMONE TAPPERS"
+      ]
+    }
+  ],
+  "2025-09-27": [
+    {
+      "time": "9:00am-2:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-10-03": [
+    {
+      "time": "5:30-9:00pm",
+      "groups": [
+        "SPONGEBOB",
+        "SQUIDWARD",
+        "SEA ANEMONE TAPPERS"
+      ]
+    },
+    {
+      "time": "5:30-8:15pm",
+      "groups": [
+        "SANDY"
+      ]
+    },
+    {
+      "time": "5:30-7:15pm",
+      "groups": [
+        "SEA ANEMONE SINGERS"
+      ]
+    },
+    {
+      "time": "6:45-8:15pm",
+      "groups": [
+        "FRENCH NARRATOR"
+      ]
+    },
+    {
+      "time": "6:45-7:45pm",
+      "groups": [
+        "PIRATES"
+      ]
+    },
+    {
+      "time": "7:45-9:00pm",
+      "groups": [
+        "PATRICK"
+      ]
+    }
+  ],
+  "2025-10-04": [
+    {
+      "time": "9:00am-1:15pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    },
+    {
+      "time": "9:00am-1:30pm",
+      "groups": [
+        "SANDY",
+        "SARDINES-20251004-900am130pm"
+      ]
+    },
+    {
+      "time": "9:00am-2:00pm",
+      "groups": [
+        "SPONGEBOB",
+        "PATRICK",
+        "PATCHY",
+        "PIRATES",
+        "SPONGE DANCERS"
+      ]
+    }
+  ],
+  "2025-10-10": [
+    {
+      "time": "5:30-9:00pm",
+      "groups": [
+        "SPONGEBOB",
+        "PATRICK",
+        "SANDY",
+        "PLANKTON",
+        "KAREN",
+        "FRENCH NARRATOR"
+      ]
+    },
+    {
+      "time": "6:45-9:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-10-11": [
+    {
+      "time": "9:00am-2:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-10-17": [
+    {
+      "time": "5:30pm-9:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-10-18": [
+    {
+      "time": "9:00am-2:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-10-24": [
+    {
+      "time": "5:30pm-9:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-10-25": [
+    {
+      "time": "9:00am-2:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-10-31": [
+    {
+      "time": "5:30pm-9:00pm",
+      "groups": [
+        "FULL CAST"
+      ]
+    }
+  ],
+  "2025-11-01": [
+    {
+      "time": "9:00am-2:00pm",
       "groups": [
         "FULL CAST"
       ]
