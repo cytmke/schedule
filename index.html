@@ -293,13 +293,18 @@
     
     function setDefaultDates() {
       const today = new Date();
+      today.setHours(0, 0, 0, 0); // Set to start of day to avoid timezone issues
       const day = today.getDay();
       const diffToFriday = (5 - day + 7) % 7;
-      const friday = new Date(today);
+      let friday = new Date(today);
       friday.setDate(today.getDate() + diffToFriday);
-      const saturday = new Date(friday);
+      let saturday = new Date(friday);
       saturday.setDate(friday.getDate() + 1);
-      
+
+      console.log('Today:', today.toISOString().split('T')[0]);
+      console.log('Calculated Friday:', friday.toISOString().split('T')[0]);
+      console.log('Calculated Saturday:', saturday.toISOString().split('T')[0]);
+
       document.getElementById('friday').value = friday.toISOString().split('T')[0];
       document.getElementById('saturday').value = saturday.toISOString().split('T')[0];
       
