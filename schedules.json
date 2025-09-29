@@ -14,18 +14,12 @@
         "SPONGEBOB",
         "PATRICK",
         "SQUIDWARD",
-        "TRIO OF GIRL FISH",
+        "ELECTRIC SKATES",
         "PLANKTON POSSE"
       ]
     }
   ],
   "2025-09-13": [
-    {
-      "time": "9:00-9:25",
-      "groups": [
-        "FULL CAST (OPTIONAL)"
-      ]
-    },
     {
       "time": "9:30-2:00",
       "groups": [
@@ -44,7 +38,7 @@
       "time": "5:30-7:30",
       "groups": [
         "PLANKTON POSSE",
-        "PATCHY",
+        "PATCHY THE PIRATE",
         "PIRATES"
       ]
     },
@@ -52,7 +46,7 @@
       "time": "5:30-8:30",
       "groups": [
         "MR. KRABS",
-        "PEARL",
+        "PEARL KRABS",
         "PLANKTON",
         "KAREN"
       ]
@@ -62,7 +56,7 @@
       "groups": [
         "PATRICK",
         "PERCH PERKINS",
-        "MAYOR"
+        "MAYOR OF BIKINI BOTTOM"
       ]
     },
     {
@@ -73,24 +67,24 @@
         "LARRY THE LOBSTER",
         "OLD MAN JENKINS",
         "MRS. PUFF",
-        "BUSTER BLUETANG",
+        "BUSTER BLUE TANG",
         "JOHNNY THE BARTENDER",
         "FOLEY FISH",
         "A FISH",
-        "ANOTHER FISH",
+        "ANOTHER FISH/MOB FISH",
         "SARDINES"
       ]
     },
     {
       "time": "6:30-9:00",
       "groups": [
-        "MONEY DANCERS"
+        "SPONGE DANCERS"
       ]
     }
   ],
   "2025-09-20": [
     {
-      "time": "9:00am-2:00pm",
+      "time": "9:30am-2:00pm",
       "groups": [
         "FULL CAST"
       ]
@@ -117,7 +111,7 @@
       ]
     },
     {
-      "time": "6:45-9:00",
+      "time": "6:45-9:00pm",
       "groups": [
         "SQUIDWARD"
       ]
@@ -127,14 +121,14 @@
       "groups": [
         "SANDY",
         "MR. KRABS",
-        "PEARL",
+        "PEARL KRABS",
         "FRENCH NARRATOR",
         "PERCH PERKINS",
-        "MAYOR",
+        "MAYOR OF BIKINI BOTTOM",
         "LARRY THE LOBSTER",
         "OLD MAN JENKINS",
         "MRS. PUFF",
-        "BUSTER BLUETANG",
+        "BUSTER BLUE TANG",
         "JOHNNY THE BARTENDER",
         "FOLEY FISH",
         "A FISH",
@@ -199,18 +193,18 @@
       ]
     },
     {
-      "time": "9:30am-1:30pm",
+      "time": "9:00am-1:30pm",
       "groups": [
         "SANDY",
-        "SARDINES-20251004-900AM130PM"
+        "SARDINES #1-5"
       ]
     },
     {
-      "time": "9:30am-2:00pm",
+      "time": "9:00am-2:00pm",
       "groups": [
         "SPONGEBOB",
         "PATRICK",
-        "PATCHY",
+        "PATCHY THE PIRATE",
         "PIRATES",
         "SPONGE DANCERS"
       ]
